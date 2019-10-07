@@ -1,0 +1,15 @@
+opam-version: "2.0"
+name: "mirage-gpio"
+version: "0.1.0"
+synopsis: "GPIO signatures and implementations for MirageOS"
+maintainer: "Hugues Fafard <fafard@in.tum.de>"
+authors: "Hugues Fafard <fafard@in.tum.de>"
+license: "MPL 2.0"
+depends: [
+  "dune" {build & >= "1.0"}
+  "mirage-device" {>= "1.0.0"}
+]
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name  "-j" jobs]
+]

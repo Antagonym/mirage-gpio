@@ -1,0 +1,5 @@
+(library
+  (name mirage_gpio)
+  (public_name mirage-gpio)
+  (libraries mirage-device)
+  (flags :standard -w A-4-41-44 -safe-string))

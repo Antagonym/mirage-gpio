@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+includedir=${prefix}/include/solo5-bindings-hvt
+libdir=${exec_prefix}/lib/solo5-bindings-hvt
+ld=ld
+ldflags=-nostdlib -z max-page-size=0x1000 -static  -T ${libdir}/solo5_hvt.lds ${libdir}/solo5_hvt.o
+
+Name: solo5-bindings-hvt
+Version: 0.4.0
+Description: Solo5 sandboxed execution environment (hvt target)
+Cflags: -ffreestanding -fstack-protector-strong -nostdinc -isystem ${includedir}/crt -I${includedir}/solo5

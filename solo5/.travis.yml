@@ -1,0 +1,8 @@
+language: c
+sudo: false
+dist: trusty
+addons:
+    apt:
+        packages:
+            - qemu-system-x86
+script: make && tests/run-tests.sh

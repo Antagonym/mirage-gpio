@@ -1,0 +1,4 @@
+(library
+  (name gpio)
+  (public_name mirage-gpio-solo5)
+  (libraries lwt mirage-gpio mirage-solo5))

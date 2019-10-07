@@ -1,0 +1,17 @@
+opam-version: "2.0"
+name: "mirage-gpio-solo5"
+version: "0.1.0"
+synopsis: "Solo5 implementation of MirageOS GPIO interface"
+maintainer: "Hugues Fafard <fafard@in.tum.de>"
+authors: "Hugues Fafard <fafard@in.tum.de>"
+license: "MPL 2.0"
+depends: [
+  "dune" {build & >= "1.0"}
+  "lwt" {>= "2.4.3"}
+  "mirage-gpio" {>= "0.1.0" & < "0.2.0"}
+  "mirage-solo5"
+]
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name  "-j" jobs]
+]
